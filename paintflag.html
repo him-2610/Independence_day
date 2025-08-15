@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="vertical-menu w3-display-topleft w3-padding-large w3-xlarge">
+    <a href="index.html" target="_blank"> Home </a>
+</div>
+<canvas id="myCanvas" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/250px-Ashoka_Chakra.svg.png" height="150" >
+
+<canvas id="myCanvas2" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+
+<button type="button" onclick="color(1)"> Paint saffron </button>
+<button type="button" onclick="colourg(1)" >Paint green </button>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+c.width = window.innerWidth;
+c.height = 150;
+
+var g=document.getElementById("myCanvas2");
+var drawgreen=g.getContext("2d");
+
+g.width = window.innerWidth;
+g.height = 150 ;
+
+function color(sw) {
+  if (sw == 1) {
+    ctx.fillStyle= "orange";
+    ctx.fillRect(0,0,c.width,c.height);
+  } else {
+    ctx.fillStyle="white";
+    ctx.fillRect(0,0,c.width,c.height);
+  }
+}
+
+function colourg(s) {
+  if (s== 1) {
+    drawgreen.fillStyle= "green";
+    drawgreen.fillRect(0,0,g.width,g.height);
+  } else {
+    drawgreen.fillStyle="white";
+    drawgreen.fillRect(0,0,g.width,g.height);
+  } 
+}
+</script>
+</body>
+</html>
