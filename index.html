@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy independence day</title>
+<title>Happy Independence Day</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+body, h1 {font-family: "Raleway", sans-serif;}
+body, html {height: 100%; margin: 0;}
 .bgimg {
   background-image: url('https://www.agoda.com/wp-content/uploads/2024/07/India-Gate-firework.jpg');
   min-height: 100%;
@@ -16,43 +16,80 @@ body, html {height: 100%}
   background-size: cover;
 }
 
+/* Menu styles */
 .vertical-menu {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .vertical-menu a {
-  background-color: #eee;
+  background-color: rgba(255,255,255,0.8);
   color: black;
   display: block;
-  padding: 12px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
   text-decoration: none;
 }
 
 .vertical-menu a:hover {
-  background-color: #ccc;
+  background-color: rgba(255,255,255,1);
 }
 
 .vertical-menu a.active {
   background-color: #04AA6D;
   color: white;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .w3-jumbo {
+    font-size: 2.5em !important;
+  }
+  .vertical-menu {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .vertical-menu a {
+    flex: 1 1 auto;
+    font-size: 14px;
+    padding: 8px;
+    margin: 2px;
+  }
+  .w3-display-middle {
+    width: 90%;
+    text-align: center;
+  }
+  .w3-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
 </style>
 </head>
 <body>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="vertical-menu w3-display-topleft w3-padding-large w3-xlarge">
-    <a href="index.html" target="_blank"> Home </a>
+  <!-- Navigation Menu -->
+  <div class="vertical-menu w3-display-topleft w3-padding-small">
+    <a href="index.html" target="_blank">Home</a>
     <a href="aboutindia.html" target="_blank">About</a>
     <a href="paintflag.html" target="_blank">Paint Flag</a>
   </div>
+
+  <!-- Main content -->
   <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top" style='color:antiquewhite;'>Independence Day</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-     <p><a href="aboutindia.html" target="_blank" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+    <h1 class="w3-jumbo w3-animate-top" style="color:antiquewhite;">Independence Day</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:60%">
+    <p>
+      <a href="aboutindia.html" target="_blank" class="w3-button w3-white w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a>
+    </p>
   </div>
 </div>
 
 </body>
 </html>
-
